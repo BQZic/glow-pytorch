@@ -89,5 +89,5 @@ if __name__ == "__main__":
     print(d["x"].size())
     img = d["x"].permute(1, 2, 0).contiguous().numpy()
     print(np.min(img), np.max(img))
-    cv2.imshow("img", img)
-    cv2.waitKey()
+    # cv2.imshow("img", img)
+    # cv2.waitKey()

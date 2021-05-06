@@ -49,8 +49,8 @@ def save_images(images, names):
     for img, name in zip(images, names):
         img = (np.clip(img, 0, 1) * 255).astype(np.uint8)
         cv2.imwrite("pictures/infer/{}.png".format(name), img)
-        cv2.imshow("img", img)
-        cv2.waitKey()
+        # cv2.imshow("img", img)
+        # cv2.waitKey()
 
 
 if __name__ == "__main__":
