@@ -47,6 +47,7 @@ def _find_images_and_annotation(root_dir):
                 onehot = [int(int(d) > 0) for d in line[1:]]
                 assert len(onehot) == len(attrs), "{} only has {} attrs < {}".format(
                     fname, len(onehot), len(attrs))
+                if fname not in images: continue
                 final.append({
                     "path": images[fname],
                     "attr": onehot
