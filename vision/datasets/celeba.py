@@ -39,7 +39,7 @@ def _find_images_and_annotation(root_dir):
             if i_line == 0:
                 image_total = int(line)
             elif i_line == 1:
-                attrs = line.split(" ")
+                attrs = line.split(" ")[1:]
             else:
                 line = re.sub("[ ]+", " ", line)
                 line = line.split(" ")
